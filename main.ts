@@ -32,3 +32,4 @@ input.onButtonPressed(Button.B, function() {
         basic.pause(3000)
         basic.showIcon(IconNames.Sad)
 })
+})
