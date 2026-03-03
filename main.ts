@@ -11,8 +11,9 @@ pins.digitalWritePin(DigitalPin.P16, 0)
 
 input.onButtonPressed(Button.A, function() {
     basic.showIcon(IconNames.Yes)
-    basic.pause(3000)
+    basic.pause(1000)
     basic.showIcon(IconNames.Happy)
+true && true
 input.onGesture(Gesture.Shake, function() {
     pins.digitalWritePin(DigitalPin.P16, 1)
     basic.pause(3000)
@@ -25,13 +26,11 @@ input.onGesture(Gesture.Shake, function() {
 input.onButtonPressed(Button.B, function() {
     pins.digitalWritePin(DigitalPin.P16, 0)
     basic.showIcon(IconNames.No)
-    basic.pause(3000)
+    basic.pause(1000)
     basic.showIcon(IconNames.Sad)
     input.onGesture(Gesture.Shake, function () {
         basic.showIcon(IconNames.No)
-        basic.pause(3000)
+        basic.pause(1000)
         basic.showIcon(IconNames.Sad)
-        basic.pause(3000)
-        basic.clearScreen()
 })
 })
