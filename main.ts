@@ -5,10 +5,17 @@
  * This program turns on a light when microbit rolls.
 */
 
+//cleanup and activate start-up saftey
 basic.clearScreen()
 basic.showIcon(IconNames.Sad)
 pins.digitalWritePin(DigitalPin.P16, 0)
+basic.showIcon(IconNames.Sad)
+input.onGesture(Gesture.Shake, function () {
+    basic.showIcon(IconNames.No)
+    basic.pause(1000)
+    basic.showIcon(IconNames.Sad)
 
+//saftey off
 input.onButtonPressed(Button.A, function() {
     basic.showIcon(IconNames.Yes)
     basic.pause(1000)
@@ -24,6 +31,7 @@ if (true)
 )
 }) 
 
+//saftey back on
 input.onButtonPressed(Button.B, function() {
     pins.digitalWritePin(DigitalPin.P16, 0)
     basic.showIcon(IconNames.No)
@@ -33,6 +41,7 @@ input.onButtonPressed(Button.B, function() {
         basic.showIcon(IconNames.No)
         basic.pause(1000)
         basic.showIcon(IconNames.Sad)
+})
 })
 })
 })
