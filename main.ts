@@ -13,15 +13,16 @@ input.onButtonPressed(Button.A, function() {
     basic.showIcon(IconNames.Yes)
     basic.pause(1000)
     basic.showIcon(IconNames.Happy)
-true && true
-input.onGesture(Gesture.Shake, function() {
-    pins.digitalWritePin(DigitalPin.P16, 1)
-    basic.pause(3000)
-    basic.clearScreen()
-    basic.pause(5000)
-    pins.digitalWritePin(DigitalPin.P16, 0)
-})
-})
+if (true) 
+    input.onGesture(Gesture.Shake, function () {
+        pins.digitalWritePin(DigitalPin.P16, 1)
+        basic.pause(3000)
+        basic.clearScreen()
+        basic.pause(5000)
+        pins.digitalWritePin(DigitalPin.P16, 0
+
+)
+}) 
 
 input.onButtonPressed(Button.B, function() {
     pins.digitalWritePin(DigitalPin.P16, 0)
@@ -32,5 +33,6 @@ input.onButtonPressed(Button.B, function() {
         basic.showIcon(IconNames.No)
         basic.pause(1000)
         basic.showIcon(IconNames.Sad)
+})
 })
 })
